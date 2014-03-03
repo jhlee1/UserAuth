@@ -1,0 +1,12 @@
+<%= div_for employee do %>
+	<table id="form">
+	<tr><td>Name:</td><td><%= link_to_unless_current employee.name, employee_path(employee) %></td></tr>
+	<tr><td>Position: </td><td><%= employee.position %></td></tr>
+	<tr><td>Hire Date:</td><td> <%= employee.hireDate.to_formatted_s %></td></tr>
+	<tr><td>Wage:</td><td> <%= employee.wage %></td></tr>
+	<tr><td><%= link_to 'Edit', edit_employee_path(employee) %> </td>
+		<td><%= link_to 'Delete', employee_path(employee), method: :delete, data: {confirm: 'Do you want to fire him/her?'} %></td>
+	<tr><td><%= link_to 'Evaluations', employee_evaluations_path(employee) %></td></tr>
+	</table>
+	
+<% end %>

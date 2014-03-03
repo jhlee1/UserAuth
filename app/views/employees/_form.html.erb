@@ -1,0 +1,13 @@
+<%= form_for @employee do |f| %>
+	<%= f.error_messages error_message: "Error is found" %>
+	<%= f.label :name %>
+	<%= f.text_field :name %><br>
+	<%= f.label :position %>
+	<%= f.text_field :position %> <br>
+	<%= f.label :hireDate %>
+	<%= f.datetime_select :hireDate %> <br>
+	<%= f.label :wage %>
+	<%= f.number_field :wage %><br>
+
+	<%= f.submit %>
+<% end %>

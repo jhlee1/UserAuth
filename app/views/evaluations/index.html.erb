@@ -1,0 +1,6 @@
+<% title @employee.name %>
+
+<%= render @evaluations %>
+
+<%= link_to 'New Evaluation', new_employee_evaluation_path(@employee) %> |
+<%= link_to 'All Employees', employees_path %>

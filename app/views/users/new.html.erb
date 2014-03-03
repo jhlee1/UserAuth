@@ -1,0 +1,27 @@
+<% title 'Sign Up' %>
+
+<%= form_for @user do |f| %>
+	<%= f.error_messages error_message: "Error is found" %>
+	<table>
+	<tr>
+		<td>
+			Email: <%= f.text_field :email %><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Password: <%= f.password_field :password %><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Confirm password: <%= f.password_field :password_confirmation, label: 'Confirm Password' %><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.submit 'Save' %>
+		</td>
+	</tr>
+
+<% end %>

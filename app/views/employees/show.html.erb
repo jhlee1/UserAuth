@@ -1,0 +1,7 @@
+<% title @employee.name %>
+
+<%= render partial: 'employee', locals: {employee: @employee} %>
+
+<%= render @employee.evaluations %>
+
+<p><%= link_to 'View All Employees', employees_path %>

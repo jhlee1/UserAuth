@@ -1,0 +1,13 @@
+
+<% title 'About' %>
+
+<div>
+	<h1>Employees</h1>
+
+
+	<% if current_user %>
+		<p> Okay now you can get an access to the list of employees</p>
+					<%= link_to 'Employee', employees_path %>
+	<% end %> <% else %>
+		<p>Please log in to get into employees page</p>
+</div>

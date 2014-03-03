@@ -1,0 +1,9 @@
+<%= div_for evaluation do %>
+
+	<h2>Evaluation</h2>
+	<p><%= evaluation.body %></p>
+	<p>
+		<%= link_to 'Edit', edit_employee_evaluation_path(@employee,evaluation) %> |
+		<%= link_to 'Delete', employee_evaluation_path(@employee, evaluation), method: :delete, confirm: 'Do you want to delete?' %>
+	</p>
+<% end %>
